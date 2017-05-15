@@ -13,45 +13,11 @@
 
 </body>
 <script type="text/javascript">
-	// var o = {};
-	// // Object.defineProperty(o, 'x', {
-	// // 	value: 1
-	// // });
-	// o.x = 2;
-	// var obj = Object.create(o);
-	// obj.x = 2;
-	// console.log(obj.x);
+	var obj = {
+		a:1,
+		b:2,
+	};
 
-	class o {
-		constructor(option) {
-			this.option = option;
-		}
-
-		getOption() {
-			return this.option;
-		}
-
-	}
-
-	class obj extends o {
-		constructor(option) {
-			super(option);
-
-		}
-
-		get x() {
-			return this.option.x;
-		}
-
-		set x(val) {
-			this.option.x = val;
-		}
-	}
-
-	var a = new obj({x:1});
-
-	a.x = 2;
-
-	console.log(a.x);
+	console.log(obj);
 </script>
 </html>
