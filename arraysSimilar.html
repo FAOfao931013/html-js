@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<title>arraysSimilar</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+<div>
+<select>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+</select>
+</div>
+</body>
+<script type="text/javascript">
+	function arraysSimilar(arr1, arr2) {
+		var result = true;
+
+		/*
+		判断长度
+		 */
+		if (arr1.length !== arr2.length) {
+			result = false;
+		}
+
+		arr1 = typeofArr(arr1);
+		arr2 = typeofArr(arr2);
+
+		/*
+		比较类型个数数组
+		 */
+		for (var i = 0; i < arr1.length; i++) {
+			if (arr1[i] !== arr2[i]) {
+				result = false;
+			}
+		}
+
+		return result ? 'true' : 'false';
+		// return result ? '相似' : '不相似';
+	}
+
+	/*
+	判断各种类型的个数
+	 */
+	function typeofArr(array) {
+		var str = 0,
+			num = 0,
+			bool = 0,
+			undef = 0,
+			nul = 0,
+			func = 0,
+			date = 0,
+			wind = 0,
+			obj = 0,
+			arr = 0;
+
+		for (var i = 0; i < array.length; i++) {
+			switch (Object.prototype.toString.call(array[i])) {
+				case '[object String]':
+					str += 1;
+					break;
+				case '[object Number]':
+					num += 1;
+					break;
+				case '[object Boolean]':
+					bool += 1;
+					break;
+				case '[object Undefined]':
+					undef += 1;
+					break;
+				case '[object Null]':
+					nul += 1;
+					break;
+				case '[object Function]':
+					func += 1;
+					break;
+				case '[object Date]':
+					date += 1;
+					break;
+				case '[object Window]':
+					wind += 1;
+					break;
+				case '[object Object]':
+					obj += 1;
+					break;
+				case '[object Array]':
+					arr += 1;
+					break;
+			}
+		}
+
+		var typeList = [str, num, bool, undef, nul, func, date, wind, obj, arr];
+
+		return typeList;
+	}
+</script>
+</html>

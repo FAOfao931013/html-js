@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+<div>
+<input id='text' type="" name="text">
+<input id='dept-hgz_version' type="" name="">
+<input id='dept-hgz_type' type="" name="">
+</div>
+</body>
+<script type="text/javascript">
+$(function() {
+	$('#text').on('keyup', function(){
+		var str = $(this).val();
+		var arr = str.split('|');
+		arr.pop();
+
+		console.log(arr);
+
+		if (arr.length == 21) {
+			$('#dept-hgz_version').val(arr[0]);
+			$('#dept-hgz_type').val(arr[1]);
+			$('#dept-hgz_no').val(arr[2]);
+			$('#dept-hgz_comp_name').val(arr[3]);
+			$('#dept-hgz_car_type').val(arr[4]);
+			$('#dept-hgz_brand').val(arr[5]);
+			$('#dept-hgz_model').val(arr[6]);
+			$('#dept-hgz_car_vin').val(arr[7]);
+			$('#dept-hgz_frame').val(arr[8]);
+			$('#dept-hgz_engine').val(arr[9]);
+			$('#dept-hgz_engine_model').val(arr[10]);
+			$('#dept-hgz_emission').val(arr[11]);
+			$('#dept-hgz_displacement').val(arr[12]);
+			$('#dept-hgz_power').val(arr[13]);
+			$('#dept-hgz_load').val(arr[14]);
+			$('#dept-hgz_number').val(arr[15]);
+			$('#dept-hgz_add_date').val(arr[16]);
+			$('#dept-hgz_color').val(arr[17]);
+			$('#dept-hgz_fuel').val(arr[18]);
+			$('#dept-hgz_total_mass').val(arr[19]);
+			$('#dept-hgz_curb_weight').val(arr[20]);
+		}
+
+		function hotkey()
+		{
+		var a=window.event.keyCode;
+		if(a==65)
+		{
+		alert("你按了a键吧");
+		}
+
+
+	});
+});
+</script>
+</html>

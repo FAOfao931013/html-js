@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>after-before-append</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+	div p {
+		background-color: yellow;
+	}
+	.before {
+		margin-bottom: 10px;
+	}
+</style>
+<div class='before'>
+	before
+</div>
+
+<div class='after'>
+	after
+</div>
+
+<div class='append'>
+	append
+</div>
+</body>
+<script type="text/javascript">
+	$(function() {
+		$('.after').after('<p>I am after,I will not be yellow</p>');
+
+		$('<p>I am insertAfter,I will not be yellow</p>').insertAfter('.after');
+
+		$('.before').before('<p>I am before,I will not be yellow</p>');
+
+		$('<p>I am insertBefore,I will not be yellow</p>').insertBefore('.before');
+
+		$('.append').append('<p>I am append,I will be yellow</p>');
+
+		$('<p>I am appendTo,I will be yellow</p>').appendTo('.append');
+	});
+</script>
+</html>

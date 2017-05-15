@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<title>对象</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	// var o = {};
+	// // Object.defineProperty(o, 'x', {
+	// // 	value: 1
+	// // });
+	// o.x = 2;
+	// var obj = Object.create(o);
+	// obj.x = 2;
+	// console.log(obj.x);
+
+	class o {
+		constructor(option) {
+			this.option = option;
+		}
+
+		getOption() {
+			return this.option;
+		}
+
+	}
+
+	class obj extends o {
+		constructor(option) {
+			super(option);
+
+		}
+
+		get x() {
+			return this.option.x;
+		}
+
+		set x(val) {
+			this.option.x = val;
+		}
+	}
+
+	var a = new obj({x:1});
+
+	a.x = 2;
+
+	console.log(a.x);
+</script>
+</html>
