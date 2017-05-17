@@ -34,7 +34,16 @@
 </body>
 <script type="text/javascript">
 let arr = ['a','b','c','d','e'];
+
+//es6
+console.log('es6');
 arr.map((val, idx) => {
+	console.log(`下标:${idx},值:${val}`);
+});
+
+//es5
+console.log('es5');
+arr.map(function(val,idx) {
 	console.log(`下标:${idx},值:${val}`);
 });
 </script>
