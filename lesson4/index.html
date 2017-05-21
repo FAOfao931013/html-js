@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+	<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Lesson4-call、apply和bind方法</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<p>
+		<h3>lesson4</h3>
+
+	</p>
+</body>
+<script type="text/javascript">
+// let a = 1;
+// let func = () => {
+// 	let a = 2;
+// 	let b = () => {
+// 		return a;
+// 	};
+
+// 	return b();
+// };
+
+// let c = func();
+
+// console.log(c);
+
+let a = {
+	a: 1,
+	func(x) {
+		console.log('a的func ' + x);
+	}
+};
+
+let b = {
+	func(x) {
+		console.log('b的func ' + x);
+	}
+};
+
+// let c = function(x) {
+// 	console.log('c ' + this.a + x);
+// };
+
+// let c = (x) => {
+// 	console.log('c ' + this.a + x);
+// };
+
+// a.func.apply(b, [2]);
+// let d = c.bind(a);
+// d(2);
+</script>
+</html>
