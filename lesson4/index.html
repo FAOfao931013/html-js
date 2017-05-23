@@ -29,14 +29,21 @@
 // let c = func();
 
 // console.log(c);
-
-let a = {
-	a: 1,
-	b:'a的b',
-	func(x) {
-		console.log('a的func ' + x + ' ' + this.b);
+let obj = {
+	a:1,
+	func:function(){
+		console.log(1);
 	}
 };
+
+obj.func();
+//let a = {
+//	a: 1,
+//	b:'a的b',
+//	func(x,y) {
+//		console.log('a的func ' + x + ' ' + this.b + y);
+//	}
+//};
 
 let b = {
 	b: 'b的b',
@@ -52,10 +59,10 @@ let c = function(x) {
 // let c = (x) => {
 // 	console.log('c ' + this.a + x);
 // };
-
-a.func.call(b, 4);
-// a.func.apply(b, [4]);
-// let d = c.bind(a);
-// d(2);
+//a.func(2);
+//a.func.call(b, 4,5);
+// a.func.apply(b, [4,5]);
+   let d = c.bind(a);
+   d(2);
 </script>
 </html>
