@@ -34,10 +34,15 @@
 </body>
 <script type="text/javascript">
 let arr = ['a','b','c','d','e'];
-let func = () => {
-	console.log('func');
-};
+//let func = () => {
+//	console.log('func');
+//};
+//
+//func();
 
+function func() {
+	console.log('aaa');''
+}
 func();
 //es6
 console.log('es6');
@@ -50,5 +55,17 @@ console.log('es5');
 arr.map(function(val,idx) {
 	console.log(`下标:${idx},值:${val}`);
 });
+
+var obj = {
+	a:1,
+	b:2,
+	c:3,
+	key:'iamkey'
+}
+
+for (key in obj) {
+	console.log(key);
+	console.log(obj[key]);
+}
 </script>
 </html>
