@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vue</title>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+	  {{ message }}
+	</div>
+
+	<div id='app-2'>
+		<span v-bind:title='message'>悬停</span>
+	</div>
+
+	<div id='app-3'>
+		<p v-if='seen'>看到我</p>
+	</div>
+
+	<div id='app-4'>
+		<ol>
+			<li v-for='li in lists'>
+				{{li}}
+			</li>
+		</ol>
+	</div>
+</body>
+<script type="text/javascript">
+let app1 = new Vue({
+	el: '#app',
+	data: {
+		message: 'Hello,Vue!'
+	}
+});
+
+let app2 = new Vue({
+	el: '#app-2',
+	data: {
+		message: `i am title ${new Date()}`
+	}
+});
+
+let app3 = new Vue({
+	el: '#app-3',
+	data: {
+		seen: true
+	}
+});
+
+let app4 = new Vue({
+	el: '#app-4',
+	data: {
+		lists: ['a','b','c']
+	}
+})
+
+</script>
+</html>
