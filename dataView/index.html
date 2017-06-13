@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>dataView</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	class View {
+		constructor() {
+			this.data = {
+				text: ''
+			};
+			this.html = '';
+		}
+		setData(data) {
+			this.data = data;
+		}
+		render() {
+			return this.html ='<p>' + this.data.text + '</p>';
+		}
+	}
+
+	const view = new View();
+
+	view.setData({text:'数据2'});
+	view.render();
+
+	console.log(view);
+	console.log(view.render());
+
+	document.querySelector('body').innerHTML = view.render();
+</script>
+</html>

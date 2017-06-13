@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LOVE</title>
+
+  </head>
+  <body>
+    <div id="canvas" style="line-height: 0.65em; font-family: Consolas, Monaco, monospace; color: #f00"></div>
+
+    <script type="text/javascript">
+    var padding = 10;
+    setInterval(function() {
+      // padding === 10 ? padding -= 10 : padding += 10;
+      drawHeart(padding === 10 ? padding -= 10 : padding += 10);
+    },1000);
+
+    function drawHeart(padding) {
+      const size = 100;
+      const halfSize = size / 2;
+      // const padding = 5;
+      const scale = 4 / (size - padding);
+      const coef = (size + 2 * padding) / size;
+
+      const canvas = [];
+
+      const f1 = function(x) {
+        return Math.sqrt(1 - Math.pow(Math.abs(x) - 1, 2));
+      };
+
+      const f2 = function(x) {
+        return -3 * Math.sqrt(1 - (Math.sqrt(Math.abs(x)) / Math.sqrt(2)));
+      };
+
+      const scaleX = function(x) {
+        const _x = x * coef - padding;
+        return (_x - halfSize) * scale;
+      }
+
+      const scaleY = function(y) {
+        const _y = y * coef - padding;
+        return _y * scale - 3;
+      }
+
+      const isInRange = function(p) {
+        const px = scaleX(p.x);
+        const py = scaleY(p.y);
+
+        const ty = f1(px);
+        const ty2 = f2(px);
+
+        return py <= ty && py >= ty2;
+      };
+
+      for (let i = 0; i < size; i++) {
+        const row = [];
+
+        for (let j = 0; j < size; j++) {
+          row.push(isInRange({ x: j, y: i }) ? '+' : '.');
+        }
+
+        canvas.push(row);
+      }
+
+
+      const $canvas = document.querySelector('#canvas');
+
+      const result = canvas.map(rows => rows.join('')).reverse().join('<br />');
+
+      $canvas.innerHTML = result;
+
+      }
+    </script>
+  </body>
+</html>
