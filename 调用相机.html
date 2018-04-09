@@ -29,6 +29,7 @@
     $('#camera, #image').on('change', function(event) {
     	var files = event.target.files,
     		file;
+    	alert(files);
     	if (files && files.length > 0) {
     		file = files[0];
     		try {
