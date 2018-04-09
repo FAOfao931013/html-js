@@ -8,10 +8,11 @@
 <body>
 
 <div>
-    <input id="camera" type="file" accept="image/*" capture="camera">
+    <input id="camera" type="file" accept="image/*" capture="camera" style="display: none;">
     <button class="take-camera">拍照</button>
-    <input id="image" type="file" accept="image/image">
+    <input id="image" type="file" accept="image/image" style="display: none;">
     <button class="take-image">相册</button>
+    <img id="placeImg">
 </div>
 
 </body>
@@ -25,7 +26,7 @@
     	$("#image").click();
     });
 
-    $('#camera').on('change', function(event) {
+    $('#camera, #image').on('change', function(event) {
     	var files = event.target.files,
     		file;
     	if (files && files.length > 0) {
@@ -34,7 +35,10 @@
     			var URL = window.URL || window.webkitURL;
     			var blob = URL.createObjectURL(file);　　 // 获取照片的文件流
     			// compressPicture(blob);　　 // 压缩照片
+    			console.log(1);
     			console.log(blob);
+
+    			$('#placeImg').attr("src", blob);
     		} catch (e) {
     			try {
     				var fileReader = new FileReader();
@@ -42,7 +46,9 @@
     					// compressPicture(event.target.result);　　 // 压缩照片
     				};
     				fileReader.readAsDataURL(file);
+    				console.log(2);
     				console.log(file);
+    				$('#placeImg').attr("src", file);
     			} catch (e) {
     				alert(common.MESSAGE.title.error, '拍照失败,请联系客服或尝试更换手机再试!');
     			}
