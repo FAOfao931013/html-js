@@ -1,15 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+	<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>HTML5页面如何在手机端浏览器调用相机、相册功能</title>
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
 </head>
 <body>
 
 <div>
-    <input type="file" accept="image/*" capture="camera">
-    <input type="file" accept="image/image/image">
+    <input id="camera" type="file" accept="image/*" capture="camera">
+    <button class="take-camera">拍照</button>
+    <input id="image" type="file" accept="image/image">
+    <button class="take-image">相册</button>
 </div>
 
 </body>
+<script type="text/javascript">
+    /*eslint-disable */
+    $('.take-camera').on('click', function() {
+    	$("#camera").click();
+    });
+
+    $('.take-image').on('click', function() {
+    	$("#image").click();
+    });
+
+    $('#camera').on('change', function(event) {
+    	var files = event.target.files,
+    		file;
+    	if (files && files.length > 0) {
+    		file = files[0];
+    		try {
+    			var URL = window.URL || window.webkitURL;
+    			var blob = URL.createObjectURL(file);　　 // 获取照片的文件流
+    			// compressPicture(blob);　　 // 压缩照片
+    			console.log(blob);
+    		} catch (e) {
+    			try {
+    				var fileReader = new FileReader();
+    				fileReader.onload = function(event) {　　　　 // 获取照片的base64编码
+    					// compressPicture(event.target.result);　　 // 压缩照片
+    				};
+    				fileReader.readAsDataURL(file);
+    				console.log(file);
+    			} catch (e) {
+    				alert(common.MESSAGE.title.error, '拍照失败,请联系客服或尝试更换手机再试!');
+    			}
+    		}
+    	}
+    });
+
+	// var takePicture = document.getElementById('camera');
+	// var takePictureUrl = function() {
+	// 	takePicture.onchange = function(event) {
+	// 		var files = event.target.files,
+	// 			file;
+	// 		if (files && files.length > 0) {
+	// 			file = files[0];
+	// 			try {
+	// 				var URL = window.URL || window.webkitURL;
+	// 				var blob = URL.createObjectURL(file);　　 // 获取照片的文件流
+	// 				compressPicture(blob);　　 // 压缩照片
+	// 			} catch (e) {
+	// 				try {
+	// 					var fileReader = new FileReader();
+	// 					fileReader.onload = function(event) {　　　　 // 获取照片的base64编码
+	// 						compressPicture(event.target.result);　　 // 压缩照片
+	// 					};
+	// 					fileReader.readAsDataURL(file);
+	// 				} catch (e) {
+	// 					alert(common.MESSAGE.title.error, '拍照失败,请联系客服或尝试更换手机再试!');
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }();
+</script>
 </html>
