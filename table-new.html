@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="./js/resize.js"></script>
+<style type="text/css">
+	.table-wrap {
+		width: 100%;
+		height: 200px;
+		position: relative;
+		margin: 0 10px;
+	}
+
+	.main {
+		text-align: center;
+		overflow: scroll;
+		height: 100%;
+		resize: vertical;
+	}
+
+	.head {
+		text-align: center;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+
+	.head table {
+		width: 100%;
+	}
+
+	table {
+		table-layout: fixed;
+	}
+
+	th,
+	td {
+		width: 100px;
+		white-space: normal;
+		word-break: break-all;
+		padding: 8px;
+	}
+</style>
+</head>
+<body>
+	<div class="table-wrap">
+	    <div class="head">
+	        <div class="head-inner">
+	            <table>
+	                <thead>
+	                    <tr>
+	                        <th class="text-center">id</th>
+	                        <th class="text-center">item1</th>
+	                        <th class="text-center">item2</th>
+	                        <th class="text-center">item3</th>
+	                        <th class="text-center">item4</th>
+	                        <th class="text-center">item5</th>
+	                        <th class="text-center">item6</th>
+	                        <th class="text-center">item7</th>
+	                        <th class="text-center">id</th>
+	                        <th class="text-center">item1</th>
+	                        <th class="text-center">item2</th>
+	                        <th class="text-center">item3</th>
+	                        <th class="text-center">item4</th>
+	                        <th class="text-center">item5</th>
+	                        <th class="text-center">item6</th>
+	                        <th class="text-center">item7</th>
+	                        <th class="text-center">id</th>
+	                        <th class="text-center">item1</th>
+	                        <th class="text-center">item2</th>
+	                        <th class="text-center">item3</th>
+	                        <th class="text-center">item4</th>
+	                        <th class="text-center">item5</th>
+	                        <th class="text-center">item6</th>
+	                        <th class="text-center">item7</th>
+	                        <th class="text-center">id</th>
+	                        <th class="text-center">item1</th>
+	                        <th class="text-center">item2</th>
+	                        <th class="text-center">item3</th>
+	                        <th class="text-center">item4</th>
+	                        <th class="text-center">item5</th>
+	                        <th class="text-center">item6</th>
+
+	                        <th class="text-center">item7</th>
+	                        <th class="text-center">id</th>
+	                        <th class="text-center">item1</th>
+	                        <th class="text-center">item2</th>
+	                        <th class="text-center">item3</th>
+	                        <th class="text-center">item4</th>
+	                        <th class="text-center">item5</th>
+	                        <th class="text-center">item6</th>
+	                        <th class="text-center">item7</th>
+	                        <th class="text-center">id</th>
+	                        <th class="text-center">item1</th>
+	                        <th class="text-center">item2</th>
+	                        <th class="text-center">item3</th>
+	                        <th class="text-center">item4</th>
+	                        <th class="text-center">item5</th>
+	                        <th class="text-center">item6</th>
+	                        <th class="text-center">item7</th>
+	                        <th class="text-center">id</th>
+	                        <th class="text-center">item1</th>
+	                        <th class="text-center">item2</th>
+	                        <th class="text-center">item3</th>
+	                        <th class="text-center">item4</th>
+	                        <th class="text-center">item5</th>
+	                        <th class="text-center">item6</th>
+	                        <th class="text-center">item7</th>
+	                        <th class="text-center">id</th>
+	                        <th class="text-center">item1</th>
+	                        <th class="text-center">item2</th>
+	                        <th class="text-center">item3</th>
+	                        <th class="text-center">item4</th>
+	                        <th class="text-center">item5</th>
+	                        <th class="text-center">item6</th>
+
+	                        <th class="text-center">item7</th>
+	                    </tr>
+	                </thead>
+	            </table>
+	        </div>
+
+	    </div>
+
+	    <div class="main">
+	        <div class="main-inner">
+	            <table class="table table-hover">
+	                <tbody>
+	                <?php for ($x=0; $x<=100; $x++) { ?>
+	                    <tr>
+	                        <td class="vertical-center text-center">1</td>
+	                        <td class="vertical-center text-center">item1</td>
+	                        <td class="vertical-center text-center">item2</td>
+	                        <td class="vertical-center text-center">item3</td>
+	                        <td class="vertical-center text-center">item4</td>
+	                        <td class="vertical-center text-center">item5</td>
+	                        <td class="vertical-center text-center">item6</td>
+	                        <td class="vertical-center text-center">item7</td>
+	                        <td class="vertical-center text-center">1</td>
+	                        <td class="vertical-center text-center">item1</td>
+	                        <td class="vertical-center text-center">item2</td>
+	                        <td class="vertical-center text-center">item3</td>
+	                        <td class="vertical-center text-center">item4</td>
+	                        <td class="vertical-center text-center">item5</td>
+	                        <td class="vertical-center text-center">item6</td>
+	                        <td class="vertical-center text-center">item7</td>
+	                        <td class="vertical-center text-center">1</td>
+	                        <td class="vertical-center text-center">item1</td>
+	                        <td class="vertical-center text-center">item2</td>
+	                        <td class="vertical-center text-center">item3</td>
+	                        <td class="vertical-center text-center">item4</td>
+	                        <td class="vertical-center text-center">item5</td>
+	                        <td class="vertical-center text-center">item6</td>
+	                        <td class="vertical-center text-center">item7</td>
+	                        <td class="vertical-center text-center">1</td>
+	                        <td class="vertical-center text-center">item1</td>
+	                        <td class="vertical-center text-center">item2</td>
+	                        <td class="vertical-center text-center">item3</td>
+	                        <td class="vertical-center text-center">item4</td>
+	                        <td class="vertical-center text-center">item5</td>
+	                        <td class="vertical-center text-center">item6</td>
+	                        <td class="vertical-center text-center">item7</td>
+	                        <td class="vertical-center text-center">1</td>
+	                        <td class="vertical-center text-center">item1</td>
+	                        <td class="vertical-center text-center">item2</td>
+	                        <td class="vertical-center text-center">item3</td>
+	                        <td class="vertical-center text-center">item4</td>
+	                        <td class="vertical-center text-center">item5</td>
+	                        <td class="vertical-center text-center">item6</td>
+	                        <td class="vertical-center text-center">item7</td>
+	                        <td class="vertical-center text-center">1</td>
+	                        <td class="vertical-center text-center">item1</td>
+	                        <td class="vertical-center text-center">item2</td>
+	                        <td class="vertical-center text-center">item3</td>
+	                        <td class="vertical-center text-center">item4</td>
+	                        <td class="vertical-center text-center">item5</td>
+	                        <td class="vertical-center text-center">item6</td>
+	                        <td class="vertical-center text-center">item7</td>
+	                        <td class="vertical-center text-center">1</td>
+	                        <td class="vertical-center text-center">item1</td>
+	                        <td class="vertical-center text-center">item2</td>
+	                        <td class="vertical-center text-center">item3</td>
+	                        <td class="vertical-center text-center">item4</td>
+	                        <td class="vertical-center text-center">item5</td>
+	                        <td class="vertical-center text-center">item6</td>
+	                        <td class="vertical-center text-center">item7</td>
+	                        <td class="vertical-center text-center">1</td>
+	                        <td class="vertical-center text-center">item1</td>
+	                        <td class="vertical-center text-center">item2</td>
+	                        <td class="vertical-center text-center">item3</td>
+	                        <td class="vertical-center text-center">item4</td>
+	                        <td class="vertical-center text-center">item5</td>
+	                        <td class="vertical-center text-center">item6</td>
+	                        <td class="vertical-center text-center">item7</td>
+	                    </tr>
+	                <?php } ?>
+	                </tbody>
+	            </table>
+	        </div>
+	    </div>
+
+	    <div class="clearfix"><ul class="pagination pull-left"><li class="disabled"><span>记录总数:190</span></li>
+	        <li class="prev disabled"><span>上一页</span></li>
+	        <li class="active"><span data-page="0">1</span></li>
+	        <li><a href="/stock/index?page=2" data-page="1">2</a></li>
+	        <li><a href="/stock/index?page=3" data-page="2">3</a></li>
+	        <li><a href="/stock/index?page=4" data-page="3">4</a></li>
+	        <li><a href="/stock/index?page=5" data-page="4">5</a></li>
+	        <li><a href="/stock/index?page=6" data-page="5">6</a></li>
+	        <li><a href="/stock/index?page=7" data-page="6">7</a></li>
+	        <li><a href="/stock/index?page=8" data-page="7">8</a></li>
+	        <li><a href="/stock/index?page=9" data-page="8">9</a></li>
+	        <li><a href="/stock/index?page=10" data-page="9">10</a></li>
+	        <li class="next"><a href="/stock/index?page=2" data-page="1">下一页</a></li></ul>
+	    </div>
+	</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	$('.main').scroll(function(e) {
+		$('.head').scrollLeft(e.target.scrollLeft);
+	});
+})
+</script>
+</html>

@@ -8,6 +8,7 @@
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
 <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="./js/moment.js"></script>
 </head>
 <body>
 <div class='data'>
@@ -21,10 +22,7 @@
 </body>
 <script type="text/javascript">
 	$(function() {
-		$('.data').data('myData', {first:'I am ',second:'FAO'});
-		const myData = $('.data').data('myData');
-		console.log(myData);
-		$('.my-data').text(myData.first + myData.second)
+		console.log(moment('2017-2-12').format('YYYY年M月D日'));
 	})
 </script>
 </html>

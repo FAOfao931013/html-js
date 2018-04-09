@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>promise</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	const promise = new Promise(function(resolve, reject) {
+		resolve(0);
+	});
+
+	const promise3 = function() {
+		return new Promise(function(resolve, reject) {
+			reject('fail 3');
+			// resolve('success 3');
+		});
+	};
+
+	const promise2 = function() {
+		return new Promise(function(resolve, reject) {
+			resolve(2);
+		}).then(function(res) {
+			return promise3();
+		});
+	};
+
+	const promise1 = function() {
+		return new Promise(function(resolve, reject) {
+			resolve(1);
+		}).then(function(res) {
+			return promise2();
+		});
+	};
+
+	promise1().then(function(res) {
+		console.log(res);
+	}).catch(function(res) {
+		console.log(res);
+	});
+</script>
+</html>

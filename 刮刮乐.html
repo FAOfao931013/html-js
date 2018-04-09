@@ -1,0 +1,41 @@
+<!DOCTYPE html >
+	<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="./js/wipe.js"></script>
+</head>
+<style type="text/css">
+		#wipe {
+			margin: 10px auto;
+			width: 300px;
+			height: 430px;
+			background: url(./img/aa.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		canvas {
+			opacity: 1;
+		}
+</style>
+<body>
+	<div id="wipe"></div>
+</body>
+<script type="text/javascript">
+	var wipe = new Wipe({
+		el: '#wipe',
+		fg: './img/gua_image.png',
+		size: 50,
+		debug: false,
+		autoWipe: false,
+		data: null,
+		onswiping: function (percent) {
+
+		}
+	});
+</script>
+</html>

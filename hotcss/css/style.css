@@ -1,0 +1,33 @@
+body {
+  width: 16rem;
+  margin: 0 auto;
+  padding: 0; }
+
+#header {
+  width: 16rem;
+  height: 1.8773333333rem;
+  line-height: 1.8773333333rem;
+  background-color: #33aa33;
+  text-align: center;
+  font-size: 1.024rem;
+  color: white; }
+
+#container1 {
+  margin-top: 0.2133333333rem;
+  padding: 0.64rem;
+  background-color: #191919;
+  color: #f0f0f0;
+  line-height: 1.7;
+  max-height: 100%;
+  font-size: 0.6826666667rem; }
+
+#container2 {
+  margin-top: 0.2133333333rem;
+  padding: 0.64rem;
+  background-color: #191919;
+  color: #f0f0f0;
+  line-height: 1.7;
+  max-height: 100%;
+  font-size: 24px; }
+
+/*# sourceMappingURL=style.css.map */
